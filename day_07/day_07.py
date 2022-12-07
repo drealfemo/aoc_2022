@@ -16,7 +16,7 @@ def get_dir_sizes(terminal_output):
                 dir_sizes[cd] = 0
         elif line.endswith(".."):
             history.pop(-1)
-            cd = "".join(history[1:])
+            cd = history[-1]
         elif line[0].isdigit():
             size = int(line.split(" ")[0])
             dir_sizes[cd] += size
